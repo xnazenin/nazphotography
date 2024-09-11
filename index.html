@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Young Photographer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Naz Photography</h1>
+            <nav>
+                <div class="menu-icon" id="menu-icon">&#9776;</div> <!-- Hamburger icon -->
+                <ul id="nav-list" class="nav-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h2>Capturing Moments, One Click at a Time</h2>
+            <p>Welcome to my world of photography. Explore my portfolio and feel free to reach out!</p>
+            <a href="#portfolio" class="btn">View Portfolio</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Hello! I'm Naz, an enthusiast photographer based in Riga. I love nature, sunsets and sunrises, capturing those beautiful
+                frames make me happy. I am aspiring to develop my skills in landscape and street photography. If you are a fellow photographer and you like my work, 
+                don't hesitate to contact me, let's create something beautiful together!
+            </p>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>Portfolio</h2>
+            <div class="gallery">
+                <div class="gallery-item"><img src="photos/1.jpg" alt="Lake photo" loading="lazy"></div>
+                <div class="gallery-item"><img src="photos/2.jpg" alt="Sand sculpture" loading="lazy"></div>
+                <div class="gallery-item"><img src="photos/3.jpg" alt="Seaside photo with tree" loading="lazy"></div>
+                <div class="gallery-item"><img src="photos/4.jpg" alt="Sunset on the beach" loading="lazy"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Naz Photography. All rights reserved.</p>
+        </div>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/xnazenin/" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://instagram.com/ninezanx" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://github.com/xnazenin" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+    </footer>
+
+    <!-- JavaScript to toggle the navigation menu -->
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const navList = document.getElementById('nav-list');
+        const galleryImages = document.querySelectorAll('.gallery-item img');
+
+        menuIcon.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+
+        // Add click event listener to each image
+        galleryImages.forEach(image => {
+            image.addEventListener('click', function () {
+                // Open the image source in a new tab
+                window.open(this.src, '_blank');
+            });
+        });
+    </script>
+</body>
+</html>

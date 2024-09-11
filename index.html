@@ -57,7 +57,7 @@
                 <div class="gallery-item"><img src="photos/1.jpg" alt="Lake photo" loading="lazy"></div>
                 <div class="gallery-item"><img src="photos/2.jpg" alt="Sand sculpture" loading="lazy"></div>
                 <div class="gallery-item"><img src="photos/3.jpg" alt="Seaside photo with tree" loading="lazy"></div>
-                <div class="gallery-item"><img src="photos/4.jpg" alt="Sunset on the beach" loading="lazy"></div>
+                <div class="gallery-item"><img src="photos/4.jpg" alt="Riga Canal" loading="lazy"></div>
             </div>
         </div>
     </section>
@@ -93,23 +93,6 @@
         </div>
     </footer>
 
-    <!-- JavaScript to toggle the navigation menu -->
-    <script>
-        const menuIcon = document.getElementById('menu-icon');
-        const navList = document.getElementById('nav-list');
-        const galleryImages = document.querySelectorAll('.gallery-item img');
-
-        menuIcon.addEventListener('click', () => {
-            navList.classList.toggle('active');
-        });
-
-        // Add click event listener to each image
-        galleryImages.forEach(image => {
-            image.addEventListener('click', function () {
-                // Open the image source in a new tab
-                window.open(this.src, '_blank');
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

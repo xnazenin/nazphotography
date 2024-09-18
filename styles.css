@@ -249,6 +249,10 @@ footer {
 	color: #fff;
 }
 
+.social-icons a:hover {
+    color: #c96bff;
+}
+
 /* Back to Top Button*/
 .back-to-top {
     position: fixed;

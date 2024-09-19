@@ -32,7 +32,7 @@ header {
     padding: 1rem 0;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 10;
     border-bottom: 5px solid #c96bff;
 }
 
@@ -143,7 +143,7 @@ header nav .nav-list li a:hover {
 }
 
 .hero .btn:hover {
-    background-color: #ca57ff;
+    background-color: #9359b5;
 }
 
 /* About Section */
@@ -223,7 +223,7 @@ header nav .nav-list li a:hover {
 }
 
 .contact form .btn:hover {
-    background-color: #ca57ff;
+    background-color: #9359b5;
 }
 
 /* Footer */
@@ -274,4 +274,61 @@ footer {
 
 .back-to-top:hover {
     background-color: #555;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 11;
+    padding-top: 100px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    animation: zoom 0.6s;
+}
+
+@keyframes zoom {
+    from { transform: scale(0) }
+    to { transform: scale(1) }
+}
+
+.close {
+    position: fixed;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#caption {
+    text-align: center;
+    color: #ccc;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 850px){
+  .modal-content {
+    padding-top: 10px;
+    width: 100%;
+  }
 }

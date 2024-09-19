@@ -2,18 +2,14 @@ const menuIcon = document.getElementById('menu-icon');
 const navList = document.getElementById('nav-list');
 const galleryImages = document.querySelectorAll('.gallery-item img');
 const backToTopButton = document.getElementById('backToTop');
+const modal = document.getElementById('imageModal');
+const modalImg = document.getElementById('modalImage');
+const captionText = document.getElementById('caption');
+const closeModal = document.querySelector('.close');
 
 // Toggle the navigation menu
 menuIcon.addEventListener('click', () => {
     navList.classList.toggle('active');
-});
-
-// Add click event listener to each image
-galleryImages.forEach(image => {
-    image.addEventListener('click', function () {
-        // Open the image source in a new tab
-        window.open(this.src, '_blank');
-    });
 });
 
 // Back to Top button functionality
@@ -29,4 +25,18 @@ window.addEventListener('scroll', function () {
     } else {
         backToTopButton.style.display = 'none';
     }
+});
+
+// Modal image viewer functionality
+galleryImages.forEach(image => {
+    image.addEventListener('click', function () {
+        modal.style.display = 'block';
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    });
+});
+
+// Close the modal when the 'x' button is clicked
+closeModal.addEventListener('click', function () {
+    modal.style.display = 'none';
 });

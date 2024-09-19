@@ -131,21 +131,6 @@ header nav .nav-list li a:hover {
     border-radius: 5px;
 }
 
-.hero .btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #c96bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.hero .btn:hover {
-    background-color: #9359b5;
-}
-
 /* About Section */
 .about {
     padding: 60px 0;
@@ -331,4 +316,53 @@ footer {
     padding-top: 10px;
     width: 100%;
   }
+}
+
+/* Booking Section */
+.booking {
+    padding: 40px 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.booking h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.booking form {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.booking form input, .booking form select, .booking form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Button Styles for Hero and Booking Section*/
+.hero .btn, .booking form button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #c96bff;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.hero .btn:hover, .booking form button:hover {
+    background-color: #9359b5;
 }

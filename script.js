@@ -40,3 +40,11 @@ galleryImages.forEach(image => {
 closeModal.addEventListener('click', function () {
     modal.style.display = 'none';
 });
+
+// Booking form submission
+const bookingForm = document.getElementById('bookingForm');
+bookingForm.addEventListener('submit', function (e) {
+	e.preventDefault();
+	alert("Your booking request has been submitted! We will contact you soon.");
+	bookingForm.reset();
+});

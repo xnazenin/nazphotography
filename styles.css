@@ -53,6 +53,10 @@ header nav .menu-icon {
     color: #fff;
 }
 
+header nav .menu-icon:hover {
+	color: #c96bff;
+}
+
 header nav .nav-list {
     display: flex;
     gap: 20px;

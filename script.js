@@ -6,10 +6,18 @@ const modal = document.getElementById('imageModal');
 const modalImg = document.getElementById('modalImage');
 const captionText = document.getElementById('caption');
 const closeModal = document.querySelector('.close');
+let isToggled = false;
 
 // Toggle the navigation menu
 menuIcon.addEventListener('click', () => {
     navList.classList.toggle('active');
+	if (isToggled) {
+		document.getElementById("menu-icon").innerHTML = '&#9776;';
+		isToggled = false;
+	} else {
+		document.getElementById("menu-icon").innerHTML = '&#124;&#124;&#124;';
+		isToggled = true;
+	}
 });
 
 // Back to Top button functionality

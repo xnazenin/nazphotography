@@ -7,6 +7,19 @@ body, h1, h2, p, ul {
     list-style: none;
 }
 
+/* Slide-in effect: initially hidden and off-screen */
+.slide-in {
+    opacity: 0;
+    transform: translateX(-20%);
+    transition: all 1s ease-out;
+}
+
+/* When visible, slide-in from left to right */
+.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 /* Global Styles */
 html {
 	scroll-behavior: smooth;

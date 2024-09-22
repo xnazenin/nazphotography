@@ -13,10 +13,10 @@
     <!-- Header Section -->
     <header>
     	<div class="container">
-            <h1>Naz Photography</h1>
+            <h1 class="slide-in">Naz Photography</h1>
             <nav>
                 <div class="menu-icon" id="menu-icon">&#9776;</div> <!-- Hamburger icon --> 
-                <ul id="nav-list" class="nav-list">
+                <ul id="nav-list" class="nav-list slide-in">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
@@ -30,8 +30,8 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-text">
-            <h2>Capturing Moments, One Click at a Time</h2>
-            <p>Welcome to my world of photography. Explore my portfolio and feel free to reach out!</p>
+            <h2 class="slide-in">Capturing Moments, One Click at a Time</h2>
+            <p class="slide-in">Welcome to my world of photography. Explore my portfolio and feel free to reach out!</p>
             <a href="#portfolio" class="btn">View Portfolio</a>
         </div>
     </section>
@@ -39,8 +39,8 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2>About Me</h2>
-            <p>Hello! I'm Naz, an enthusiast photographer based in Riga. I love nature, sunsets and sunrises, capturing those beautiful
+            <h2 class="slide-in">About Me</h2>
+            <p class="slide-in">Hello! I'm Naz, an enthusiast photographer based in Riga. I love nature, sunsets and sunrises, capturing those beautiful
                 frames make me happy. I am aspiring to develop my skills in landscape and street photography. If you are a fellow photographer and you like my work, 
                 don't hesitate to contact me, let's create something beautiful together!
             </p>
@@ -50,7 +50,7 @@
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio">
         <div class="container">
-            <h2>Portfolio</h2>
+            <h2 class="slide-in">Portfolio</h2>
             <div class="gallery">
                 <div class="gallery-item"><img src="photos/1.jpg" alt="Lake photo" loading="lazy"></div>
                 <div class="gallery-item"><img src="photos/2.jpg" alt="Sand sculpture" loading="lazy"></div>
@@ -70,7 +70,7 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Contact Me</h2>
+            <h2 class="slide-in">Contact Me</h2>
             <form>
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
@@ -100,8 +100,9 @@
     
     <!-- Back to Top Button -->
 	<button class="back-to-top" id="backToTop">Top</button>
-    <script src="headerFooterManager.js"></script>
+	
+	<!-- Load jQuery library -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
-
 </body>
 </html>

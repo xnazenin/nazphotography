@@ -10,14 +10,13 @@
 </head>
 
 <body>
-	<universal-header></universal-header>
     <!-- Header Section -->
     <header>
         <div class="container">
-            <h1>Naz Photography</h1>
+            <h1 class="slide-in">Naz Photography</h1>
             <nav>
             	<div class="menu-icon" id="menu-icon">&#9776;</div>
-                <ul id="nav-list" class="nav-list">
+                <ul id="nav-list" class="nav-list slide-in">
                     <li><a href="index.html#home">Home</a></li>
                     <li><a href="index.html#about">About</a></li>
                     <li><a href="index.html#portfolio">Portfolio</a></li>
@@ -31,8 +30,8 @@
     <!-- Booking Section -->
     <section id="booking" class="booking">
         <div class="container">
-            <h2>Book a Photo Session</h2>
-            <p>Fill out the form below to schedule your photo session with me. I will get back to you as soon as possible to confirm your booking!</p>
+            <h2 class="slide-in">Book a Photo Session</h2>
+            <p class="slide-in">Fill out the form below to schedule your photo session with me. I will get back to you as soon as possible to confirm your booking!</p>
             <form id="bookingForm">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
@@ -52,8 +51,7 @@
             </form>
         </div>
     </section>
-
-	<universal-footer></universal-footer>
+    
     <!-- Footer Section -->
     <footer>
         <div class="container">
@@ -75,6 +73,40 @@
 	<!-- Back to Top Button -->
 	<button class="back-to-top" id="backToTop">Top</button>
 	
+	<!-- Load jQuery library -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		// Booking form submission
+		const bookingForm = document.getElementById('bookingForm');
+		bookingForm.addEventListener('submit', function (e) {
+			e.preventDefault();
+			alert("Your booking request has been submitted! I will contact you soon.");
+			bookingForm.reset();
+		});
+		
+        $(document).ready(function() {
+            // Function to animate elements when they are in the viewport
+            function animateOnScroll() {
+                $('h1, h2, ul, p').each(function() {
+                    var elementTop = $(this).offset().top;
+                    var viewportBottom = $(window).scrollTop() + $(window).height();
+
+                    // Check if the element is in the viewport
+                    if (elementTop < viewportBottom) {
+                        $(this).addClass('visible'); // Add the visible class to start the animation
+                    }
+                });
+            }
+
+            // Trigger the animation on page load
+            animateOnScroll();
+
+            // Trigger the animation on scroll
+            $(window).on('scroll', function() {
+                animateOnScroll();
+            });
+        });
+    </script>
 	<script src="script.js"></script>
 
 </body>

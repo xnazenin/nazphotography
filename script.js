@@ -49,10 +49,25 @@ closeModal.addEventListener('click', function () {
     modal.style.display = 'none';
 });
 
-// Booking form submission
-const bookingForm = document.getElementById('bookingForm');
-bookingForm.addEventListener('submit', function (e) {
-	e.preventDefault();
-	alert("Your booking request has been submitted! We will contact you soon.");
-	bookingForm.reset();
+$(document).ready(function() {
+// Function to animate elements when they are in the viewport
+	function animateOnScroll() {
+    	$('h1, h2, ul, p').each(function() {
+        	var elementTop = $(this).offset().top;
+            var viewportBottom = $(window).scrollTop() + $(window).height();
+
+            // Check if the element is in the viewport
+            if (elementTop < viewportBottom) {
+            	$(this).addClass('visible'); // Add the visible class to start the animation
+            }
+		});
+	}
+
+	// Trigger the animation on page load
+    animateOnScroll();
+
+    // Trigger the animation on scroll
+    $(window).on('scroll', function() {
+    	animateOnScroll();
+    });
 });

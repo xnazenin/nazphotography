@@ -49,6 +49,13 @@ closeModal.addEventListener('click', function () {
     modal.style.display = 'none';
 });
 
+// Close the modal when it is clicked elsewhere than image
+window.onclick = function(event) {
+   if (event.target == modal) {
+      modal.style.display = "none";
+    }
+}
+
 $(document).ready(function() {
 // Function to animate elements when they are in the viewport
 	function animateOnScroll() {

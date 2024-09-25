@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1 class="slide-in">Naz Photography</h1>
+            <nav>
+            	<div class="menu-icon" id="menu-icon">&#9776;</div> <!-- Hamburger icon --> 
+                <ul id="nav-list" class="nav-list slide-in">
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="booking.html">Book a Session</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Gallery Section -->
+    <section id="gallery-section" class="gallery-section">
+        <div class="container">
+            <h2 class="slide-in">Explore My Work</h2>
+            <h3 class="slide-in">Exterior Architectural Photography</h3>
+            <div class="gallery-grid">
+                <!-- Individual image items -->
+                <div class="gallery-item">
+                    <img src="photos/exterior1.jpg" alt="Riga" class="gallery-img" loading="lazy" />
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/exterior2.jpg" alt="Riga" class="gallery-img" loading="lazy" />
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/exterior3.jpg" alt="Riga" class="gallery-img" loading="lazy" />
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/exterior4.jpg" alt="Riga" class="gallery-img" loading="lazy" />
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/exterior5.jpg" alt="Warsaw" class="gallery-img" loading="lazy" />
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/exterior7.jpg" alt="Riga" class="gallery-img" loading="lazy" />
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/exterior6.jpg" alt="Warsaw" class="gallery-img" loading="lazy" />
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/exterior8.jpg" alt="Ventspils" class="gallery-img" loading="lazy" />
+                </div>
+            </div>
+            <h3 class="slide-in">Interior Design Photography</h3>
+            <div class="gallery-grid">
+            	<div class="gallery-item">
+                    <img src="photos/interior1.jpg" alt="Riga International Airport" class="gallery-img" loading="lazy" />
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/interior2.jpg" alt="Art Noveau Museum" class="gallery-img" loading="lazy" />
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/interior3.jpg" alt="National Library of Latvia" class="gallery-img" loading="lazy" />
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/interior4.jpg" alt="University of Latvia" class="gallery-img" loading="lazy" />
+                </div>
+            </div>
+            <h3 class="slide-in">Landscape Photography</h3>
+            <div class="gallery-grid">
+            	<div class="gallery-item">
+                    <img src="photos/1.jpg" alt="Lake photo" class="gallery-img" loading="lazy" />
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/2.jpg" alt="Sand sculpture" class="gallery-img" loading="lazy" />
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/3.jpg" alt="Seaside photo with tree" class="gallery-img" loading="lazy" />
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/4.jpg" alt="Riga Canal" class="gallery-img" loading="lazy" />
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Modal Structure -->
+	<div id="imageModal" class="modal">
+    	<span class="close">&times;</span>
+    	<img class="modal-content" id="modalImage">
+    	<div id="caption"></div>
+	</div>
+
+    <!-- Footer Section -->
+    <footer>
+    	<div class="container">
+        	<p>&copy; 2024 Naz Photography. All rights reserved.</p>
+        </div>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/xnazenin/" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://instagram.com/ninezanx" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://github.com/xnazenin" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+	<button class="back-to-top" id="backToTop">Top</button>
+
+    <script>
+        $(document).ready(function() {
+
+            // Slide-in animation on scroll
+            function animateOnScroll() {
+                $('h1, h2, h3, ul, .gallery-item').each(function() {
+                    var elementTop = $(this).offset().top;
+                    var viewportBottom = $(window).scrollTop() + $(window).height();
+
+                    if (elementTop < viewportBottom) {
+                        $(this).addClass('visible');
+                    }
+                });
+            }
+
+            animateOnScroll();
+            $(window).on('scroll', function() {
+                animateOnScroll();
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+    	<div class="container">
+            <h1 class="slide-in">Naz Photography</h1>
+            <nav>
+                <div class="menu-icon" id="menu-icon">&#9776;</div> <!-- Hamburger icon --> 
+                <ul id="nav-list" class="nav-list slide-in">
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="booking.html">Book a Session</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <h2 class="slide-in">Latest Articles</h2>
+            <div class="blog-posts">
+
+                <article class="blog-post slide-in">
+                    <h3>Mobile Photography: Tips for Capturing Stunning Shots with Your Phone</h3>
+                    <p class="date">Posted on September 18, 2024</p>
+                    <p>Whether you're documenting your travels, taking candid portraits, or shooting in low light, mastering a few key techniques can dramatically enhance your mobile photography. Here's how to get the best out of your smartphone camera.</p>
+                    <a href="blog-post-1.html" class="read-more">Read more</a>
+                </article>
+
+                <article class="blog-post slide-in">
+                    <h3>The Magic of Golden Hour Photography</h3>
+                    <p class="date">Posted on September 10, 2024</p>
+                    <p>Learn why the golden hour, that magical time just after sunrise or before sunset, is a photographer's best friend and how to make the most out of it.</p>
+                    <a href="blog-post-2.html" class="read-more">Read more</a>
+                </article>
+
+                <article class="blog-post slide-in">
+                    <h3>The Rule of Thirds: Instantly Improve Your Composition</h3>
+                    <p class="date">Posted on August 25, 2024</p>
+                    <p>Let's dive into what the rule of thirds is, why it works, and how you can apply it to improve your photography.</p>
+                    <a href="blog-post-3.html" class="read-more">Read more</a>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+    	<div class="container">
+        	<p>&copy; 2024 Naz Photography. All rights reserved.</p>
+        </div>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/xnazenin/" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://instagram.com/ninezanx" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://github.com/xnazenin" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+	<button class="back-to-top" id="backToTop">Top</button>
+
+    <script>
+        $(document).ready(function() {
+            // Slide-in animation on scroll
+            function animateOnScroll() {
+                $('h1, h2, ul, p, article').each(function() {
+                    var elementTop = $(this).offset().top;
+                    var viewportBottom = $(window).scrollTop() + $(window).height();
+
+                    if (elementTop < viewportBottom) {
+                        $(this).addClass('visible');
+                    }
+                });
+            }
+
+            // Trigger the animation on page load and scroll
+            animateOnScroll();
+            $(window).on('scroll', function() {
+                animateOnScroll();
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    
+</body>
+</html>

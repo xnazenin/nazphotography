@@ -335,7 +335,7 @@ footer {
   }
 }
 
-/* Booking Section */
+/* Booking Styles */
 .booking {
     padding: 40px 0;
     background-color: #f4f4f4;
@@ -382,4 +382,101 @@ footer {
 
 .hero .btn:hover, .booking form button:hover {
     background-color: #9359b5;
+}
+
+/* Blog Styles */
+.blog {
+    padding: 40px 0;
+    background-color: #f4f4f4;
+}
+
+.blog-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.blog-post {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.blog-post h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.blog-post .date {
+    font-size: 0.9em;
+    color: #888;
+}
+
+.blog-post p {
+    margin: 10px 0;
+    text-align: justify;
+}
+
+.read-more {
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+.blog-post hr {
+	margin: 40px 20px;
+}
+
+.blog-post li {
+	margin-bottom: 10px;
+	text-align: justify;
+}
+
+/* Gallery Styles */
+.gallery-section {
+    padding: 40px 0;
+    background-color: #f4f4f4;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 350px;
+    display: block;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+}
+
+.gallery-section h2 {
+	text-align: center;
 }

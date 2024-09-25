@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Rule of Thirds</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1 class="slide-in">Naz Photography</h1>
+            <nav>
+            	<div class="menu-icon" id="menu-icon">&#9776;</div> <!-- Hamburger icon -->
+                <ul id="nav-list" class="nav-list slide-in">
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="booking.html">Book a Session</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Blog Post Section -->
+    <section id="blog-post" class="blog-post">
+        <div class="container">
+            <h2 class="slide-in">The Rule of Thirds: Instantly Improve Your Composition</h2>
+            <p class="date slide-in">Posted on August 25, 2024</p>
+            <p class="slide-in">The Rule of Thirds is a simple but powerful technique that can greatly improve your photography composition. Imagine dividing your frame into nine equal parts with two horizontal and two vertical lines. Instead of centering your subject, position key elements along these lines or at the intersections. This creates more balanced, dynamic photos.</p>
+            <hr />
+            <h3 class="slide-in">Why It Works</h3>
+            <ul class="slide-in">
+            	<li><strong>Guides the Eye:</strong> Placing subjects off-center naturally leads the viewer's gaze through the image.</li>
+				<li><strong>Balances Negative Space:</strong> It helps distribute the subject and background in a more harmonious way.</li>
+				<li><strong>Adds Depth:</strong> Off-center subjects feel less rigid and more engaging.</li>
+			</ul>
+			<hr />
+			<h3 class="slide-in">How to Apply It</h3>
+			<ol class="slide-in">
+            	<li><strong>Use Your Camera's Grid:</strong> Most cameras and smartphones have a grid overlay that divides the screen into thirds. Enable this feature for easy composition.</li>
+				<li><strong>Align Subjects:</strong> In portraits, place the subject's eyes along the top grid line. In landscapes, position the horizon on a horizontal line.</li>
+				<li><strong>Balance Foreground and Background:</strong> Use the Rule of Thirds to balance elements like trees, buildings, or mountains for more dynamic shots.</li>
+				<li><strong>Leading Room for Moving Subjects:</strong> Place moving subjects ahead of their motion to give the sense of direction and space.</li>
+			</ol>
+			<hr />
+			<h3 class="slide-in">When to Break the Rule</h3>
+			<p class="slide-in">Once you've mastered the Rule of Thirds, feel free to break it for artistic effect. Centered compositions can work well for symmetry or when you want a powerful focal point.</p>
+			<hr />
+			<h3 class="slide-in">Conclusion</h3>
+			<p class="slide-in">The Rule of Thirds is an easy way to create visually compelling photos. By positioning subjects along the grid, you can improve balance, depth, and interest in your images. Practice with this technique, and watch your photography instantly improve!</p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+    	<div class="container">
+        	<p>&copy; 2024 Naz Photography. All rights reserved.</p>
+        </div>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/xnazenin/" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://instagram.com/ninezanx" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://github.com/xnazenin" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+	<button class="back-to-top" id="backToTop">Top</button>
+
+    <script>
+        $(document).ready(function() {
+            function animateOnScroll() {
+                $('h1, h2, h3, ul, p').each(function() {
+                    var elementTop = $(this).offset().top;
+                    var viewportBottom = $(window).scrollTop() + $(window).height();
+
+                    if (elementTop < viewportBottom) {
+                        $(this).addClass('visible');
+                    }
+                });
+            }
+
+            animateOnScroll();
+            $(window).on('scroll', function() {
+                animateOnScroll();
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+
+</body>
+</html>

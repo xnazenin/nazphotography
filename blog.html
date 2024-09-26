@@ -78,27 +78,6 @@
     <!-- Back to Top Button -->
 	<button class="back-to-top" id="backToTop">Top</button>
 
-    <script>
-        $(document).ready(function() {
-            // Slide-in animation on scroll
-            function animateOnScroll() {
-                $('h1, h2, ul, p, article').each(function() {
-                    var elementTop = $(this).offset().top;
-                    var viewportBottom = $(window).scrollTop() + $(window).height();
-
-                    if (elementTop < viewportBottom) {
-                        $(this).addClass('visible');
-                    }
-                });
-            }
-
-            // Trigger the animation on page load and scroll
-            animateOnScroll();
-            $(window).on('scroll', function() {
-                animateOnScroll();
-            });
-        });
-    </script>
     <script src="script.js"></script>
     
 </body>

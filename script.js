@@ -8,6 +8,29 @@ const captionText = document.getElementById('caption');
 const closeModal = document.querySelector('.close');
 let isToggled = false;
 
+$(document).ready(function() {
+// Function to animate elements when they are in the viewport
+	function animateOnScroll() {
+    	$('h1, h2, h3, ul, ol, p, article').each(function() {
+        	var elementTop = $(this).offset().top;
+            var viewportBottom = $(window).scrollTop() + $(window).height();
+
+            // Check if the element is in the viewport
+            if (elementTop < viewportBottom) {
+            	$(this).addClass('visible'); // Add the visible class to start the animation
+            }
+		});
+	}
+
+	// Trigger the animation on page load
+    animateOnScroll();
+
+    // Trigger the animation on scroll
+    $(window).on('scroll', function() {
+    	animateOnScroll();
+    });
+});
+
 // Toggle the navigation menu
 menuIcon.addEventListener('click', () => {
     navList.classList.toggle('active');
@@ -53,28 +76,5 @@ closeModal.addEventListener('click', function () {
 window.onclick = function(event) {
    if (event.target == modal) {
       modal.style.display = "none";
-    }
+   }
 }
-
-$(document).ready(function() {
-// Function to animate elements when they are in the viewport
-	function animateOnScroll() {
-    	$('h1, h2, ul, p').each(function() {
-        	var elementTop = $(this).offset().top;
-            var viewportBottom = $(window).scrollTop() + $(window).height();
-
-            // Check if the element is in the viewport
-            if (elementTop < viewportBottom) {
-            	$(this).addClass('visible'); // Add the visible class to start the animation
-            }
-		});
-	}
-
-	// Trigger the animation on page load
-    animateOnScroll();
-
-    // Trigger the animation on scroll
-    $(window).on('scroll', function() {
-    	animateOnScroll();
-    });
-});

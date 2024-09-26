@@ -98,25 +98,6 @@
     <!-- Back to Top Button -->
 	<button class="back-to-top" id="backToTop">Top</button>
 
-    <script>
-        $(document).ready(function() {
-            function animateOnScroll() {
-                $('h1, h2, h3, ul, p').each(function() {
-                    var elementTop = $(this).offset().top;
-                    var viewportBottom = $(window).scrollTop() + $(window).height();
-
-                    if (elementTop < viewportBottom) {
-                        $(this).addClass('visible');
-                    }
-                });
-            }
-
-            animateOnScroll();
-            $(window).on('scroll', function() {
-                animateOnScroll();
-            });
-        });
-    </script>
     <script src="script.js"></script>
 
 </body>
